@@ -1,18 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assistencia técnica</title>
 </head>
 <body>
-    <h1>hello world</h1>
-    <h2>hello world</h2>
-    <h3>hello world</h3>
-    <h4>hello world</h4>
-    <h5>hello world</h5>
-    <h6>hello world</h6>
-    <div><p>hello world</p></div>
-    
+    <aside class="menu-lateral">
+        <div class="logo">
+            <h1>techcontrol</h1>
+            <p>assistencia técnica</p>
+        </div>
+
+        <nav>
+            <a href="index.html" class="ativo">
+                Dashboard
+            </a>
+            <a href="clientes.html">
+                Clientes
+            </a>
+            <a href="ordens.html">
+                Ordens de serviço
+            </a>
+            <a href="nova-ordem.html">
+                nova ordem
+            </a>
+        </nav>
+    </aside>
+
+    <main class="conteudo">
+        <header class="cabecalho">
+            <div>
+                <h2>Dashboard</h2>
+                <p>visao geral da assistencia tecnica</p>
+            </div>
+        <a href="nova-ordem.html" class="botao-principal">
+            + nova ordem
+        </a>
+        </header>
+
+        <section class="cards">
+            <article class="card">
+                <span>ordens abertas</span>
+                <strong id="ordens-abertas">0</strong>
+            </article>
+
+            <article class="card">
+                <span>em manutençao</span>
+                <strong id="em-manutencao">0</strong>
+            </article>
+
+            <article class="card">
+                <span>Faturamento</span>
+                <strong id="faturamento">R$ 0,00</strong>
+            </article>
+        </section>
+
+        <section class="secao">
+            <div class="titulo-secao">
+                <div>
+                    <h3>Ordens recentes</h3>
+                    <p>ultimos equipamentos cadastrados</p>
+                </div>
+
+                <a href="ordens.html">ver todas</a>
+            </div>
+
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ordem</th>
+                            <th>cliente</th>
+                            <th>equipamento</th>
+                            <th>entrada</th>
+                            <th>status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabela-ordens-recentes">
+                        <tr>
+                            <td colspan="5" class="sem-dados">
+                                nenhuma ordem cadastrada
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>
